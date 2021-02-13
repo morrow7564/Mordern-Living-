@@ -1,0 +1,95 @@
+.starter-title {
+    justify-content: center;
+    padding-top: 2em;
+}
+.starter-title2 {
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-bottom: 18px;
+}
+
+.head1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    padding: 0px;
+    margin: 0px;
+    white-space: pre-wrap;
+}
+.head2 {
+    font-size: 4em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+
+.startercard{
+    width: 17em;
+    height:16em ;
+    animation: transitionIn 0.75s;
+    transition: all ease-in 0.3s;
+    margin: 2em;
+    cursor: pointer;
+    box-shadow: 0px 0px 3em #dddddd
+}
+
+
+@keyframes transitionIn {
+    from {opacity: 0; transform: translateY(18px);}
+    to {opacity: 1; transform: translateY(0); }
+  }
+
+  .ktext{
+    color: white;
+    font-size: 1.7em;
+    position: relative;
+    left: 1.5em;
+  }
+  .btext{
+    color: white;
+    font-size: 1.6em;
+    position: relative;
+    left: 1.2em;
+  }
+  .ltext{
+    color: white;
+    font-size: 1.7em;
+    position: relative;
+    left: .5em;
+  }
+  .mtext{
+    color: white;
+    font-size: 1.7em;
+    position: relative;
+    left: .6em;
+  }
+
+  .fa-caret-down{
+    position: relative;
+    left: 20em;
+  }
+
+.fa-sink{
+  
+}
+
+  .kith1{
+    background-color: white;
+    border-left: 17px solid #ae6e1c;
+    padding: 35px;
+    box-shadow: 0px 0px 6px #DDDDDD;
+    margin-bottom: 20px;
+  }
+
+ 
+
+  .accord{
+    background-color: white;
+    border-left: 17px solid #ae6e1c;
+    padding: 35px;
+    box-shadow: 0px 0px 6px #DDDDDD;
+    margin-bottom: 20px;
+  }
+
+ .con{
+   position: relative;
+   left: 8.3em;
+  }

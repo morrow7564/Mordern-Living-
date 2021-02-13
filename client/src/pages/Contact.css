@@ -1,0 +1,58 @@
+.touchbox{
+    background-color: #626366;   
+    height: 31em;
+    box-shadow: 5px 10px #888888;
+}
+
+.head{
+    color: white;
+    position: absolute;
+    top: 7em;
+    left: 2em;
+}
+
+.touchtext{
+    font-size: 3.5em;
+    font-weight: bold;
+    font-style: oblique;
+    padding: .2em;
+}
+ .getintext{
+     font-weight: normal;
+     font-size: 2.1em;
+
+ }
+
+
+.touchp{
+    font-size: 1.8em;
+}
+
+.contactbox{
+    padding: .5em;
+    position: absolute;
+    top: 8em;
+    left: 12em;
+    box-shadow: 0px 0px 3em #dddddd;
+  
+}
+
+.textarea {
+    resize: none;
+}
+
+.button{
+    outline-color:  #ae6e1c !important;
+    background-color:  #ae6e1c !important;    
+}
+
+.button:hover{
+   background-color:  #7a9392;
+}
+
+.officebox{
+    position: absolute;
+    left: 50em;
+    bottom:12em;
+    /* box-shadow: 0px 0px 3em #dddddd;   */
+}

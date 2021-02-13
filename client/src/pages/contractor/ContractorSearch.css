@@ -1,0 +1,90 @@
+
+.ContractorItem{
+    margin: auto;
+    margin-bottom: 30px;
+    align-self: center;
+    background-color: white;
+    width: 35em;
+    height:14em ;
+    text-align: center;
+    box-shadow: 1em  1em 0em #7a9392 ;
+    
+  }
+
+  .search{
+      Margin:auto;
+      padding: 3em;
+  }
+
+.topbox{
+    padding-bottom: 2em;
+    background-color: #626366;   
+    height: 29em;
+    box-shadow: 5px 10px #888888;
+    
+   
+}
+
+.tittle{
+    text-align: center;
+    color:white;
+    margin: auto;
+}
+
+.pro{
+    font-size: 5em;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.findatext{
+    font-size: 2em;
+}
+
+
+.tbp{
+text-align: center;
+color: white;
+font-size: 1.2em;
+}
+
+.form1{
+    margin: auto;
+}
+.butt{
+    background-color: #7a9392 !important;
+    outline-color: #7a9392 !important;
+}
+
+.cp{
+    padding: 0%;
+    margin: 0%;
+    
+}
+
+.text{
+    position: relative;
+    top: 2em;
+    left: 1em;
+}
+
+.yelp{
+    color: #ae6e1c ;
+    text-shadow: 1px 1px 1px #ccc;
+    position: absolute;
+    right: 12.5em;
+    top: .3em;
+    font-size: 3.5em;
+}
+
+.heart{
+    color: #626366;
+    position: relative;
+    top: .5em;
+    left: .5em;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 2em;
+    text-align: center;
+
+}
