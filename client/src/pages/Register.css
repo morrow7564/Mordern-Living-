@@ -1,9 +1,10 @@
 /* Register and Login Page */
 .Register-Page,
 .Login-Page {
-    height: 100vh;
-    padding-top: 3rem;
-    box-sizing: border-box
+    padding: 3rem 0;
+    box-sizing: border-box;
+    background-color: #EDE9E3;
+    min-height: 90vh;
 }
 
 .Register,
@@ -12,8 +13,8 @@
     width: 35vw;
     margin: 0 auto 1rem;
     box-shadow: 0 19px 35px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    
+    border-radius: 2px;
+    background-color: white;
 }
 
 .Register form,
@@ -39,6 +40,22 @@
 
 .user-access-links {
     text-align: center;
+}
+
+.user-log-msg {
+    width: 90vw;
+    margin: 0 auto;
+    background-color: #F8D7DA;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.75rem;
+}
+
+.user-log-msg p {
+    text-align: center;
+    display: block;
+    margin: 0;
+    color: #721C24
 }
 
 

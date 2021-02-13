@@ -1,13 +1,14 @@
-/* Projects List */
-
 .ProjectsList {
     padding: 2rem;
+    background-color: #EDE9E3;
 }
 
 .ProjectItem {
+    background-color: white;
     width: 45vw;
     margin: 0 auto 3rem;
-    padding: 1rem;
+    padding: 1.5rem;
+    border: 1px solid black;
     box-shadow: 0 19px 35px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -64,6 +65,7 @@
 
 /* Project Edit Form */
 .Project-edit-form {
+    background-color: white;
     width: 45vw;
     margin: 0 auto 3rem;
     padding: 1rem;
@@ -82,6 +84,8 @@
     align-items: flex-start;
 }
 
+.Project-edit-form form input,
+.Project-edit-form form select,
 .Project-edit-form form textarea {
     width: 100%;
     margin-bottom: 1rem;
@@ -90,7 +94,7 @@
 .Project-edit-form form button {
     border: none;
     border-radius: 2px;
-    background-color: lightgray;
-    color: black;
+    background-color: #626366;
+    color: white;
     padding: 0.25rem 0.75rem;
 }

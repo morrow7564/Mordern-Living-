@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { NavigationBar } from '../components/NavigationBar';
+import NavigationBar from '../components/NavigationBar';
 
 import { Container, Row, Col, Form } from "reactstrap";
 import Divider from '@material-ui/core/Divider';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
+import { Button, Card, CardDeck } from 'react-bootstrap';
 import Testimony from './TestimonyCarousel';
+import Fade from 'react-reveal/Fade';
 import "./Home.css";
 
 import KitchenHome from "../images/KitchenHome.png";
@@ -23,6 +22,11 @@ import Bathroom400 from "../images/Bathroom400x400.jpg";
 import Media400 from "../images/Media400x400.jpg";
 import Living400 from "../images/Living400x400.jpg";
 
+const cardRooms = [ 
+    {id: 1, room: "KITCHEN", image: Kitchen400}, {id: 2, room: "BATHROOM", image: Bathroom400}, 
+    {id: 3, room: "MEDIA ROOM", image: Media400}, {id: 4, room: "LIVING ROOM", image: Living400} 
+];
+
 
 class Home extends Component {
     render() {
@@ -31,12 +35,13 @@ class Home extends Component {
                 <NavigationBar />
 
                 {/* Header section */}
+                <Fade>
                 <header id="home">
                     <div className="row banner">
                         <div className="banner-text">
                             <div><span className="banner1">Refresh <span className="banner2">YOUR HOME.</span></span></div>
                             <div><span className="banner3">Find everything you need to get started on building your dream home.</span></div>
-                            <div className="button-header"><Link to="/Register"><Button variant="outline-light" style={{ marginRight: "10px", marginTop: "10px", borderRadius: "0px", backgroundColor: "#7a9392" }} size="lg">SIGN-UP</Button></Link></div>
+                            <div className="button-header"><Link to="/register"><Button variant="outline-light" style={{ marginRight: "10px", marginTop: "10px", borderRadius: "0px", backgroundColor: "#7a9392" }} size="lg">SIGN-UP</Button></Link></div>
                         </div>
                     </div>
                 </header>
@@ -56,31 +61,15 @@ class Home extends Component {
                 </Container>
                 {/* Home Remodeling Images section  */}
                 <Container className="cards">
-                    <CardDeck d-flex >
-                        <Card d-flex align-items-stretch w-100>
-                            <Card.Img variant="top" src={Kitchen400} />
-                            <Card.ImgOverlay >
-                                <Card.Title><span className="card-title-text "> KITCHEN</span></Card.Title>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card d-flex align-items-stretch w-100>
-                            <Card.Img variant="top" src={Bathroom400} />
-                            <Card.ImgOverlay >
-                                <Card.Title><span className="card-title-text ">BATHROOM </span></Card.Title>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card d-flex align-items-stretch w-100>
-                            <Card.Img variant="top" src={Media400} />
-                            <Card.ImgOverlay >
-                                <Card.Title><span className="card-title-text ">MEDIA ROOM</span></Card.Title>
-                            </Card.ImgOverlay>
-                        </Card>
-                        <Card d-flex align-items-stretch w-100>
-                            <Card.Img variant="top" src={Living400} />
-                            <Card.ImgOverlay >
-                                <Card.Title><span className="card-title-text ">LIVING ROOM</span></Card.Title>
-                            </Card.ImgOverlay>
-                        </Card>
+                    <CardDeck className="d-flex" >
+                        {cardRooms.map(c => (
+                            <Card key={c.id} className="card-main d-flex align-items-stretch w-100">
+                                <Card.Img variant="top" src={c.image} />
+                                <Card.ImgOverlay className="card-main-overlay">
+                                    <Card.Title className="card-main-title text-center"><span className="card-title-text ">{c.room}</span></Card.Title>
+                                </Card.ImgOverlay>
+                            </Card>
+                        ))}
                     </CardDeck>
                 </Container>
                 {/* End of Home Remodeling Images section  */}
@@ -95,7 +84,7 @@ class Home extends Component {
                                 <span className="header1" style={{ color: 'white' }}>OUR</span>
                                 <span className="header2" style={{ color: 'white' }}> PURPOSE</span>
                                 <p className="about_text">Looking to refresh your home? Need ideas on home improvement and don't know where to start? Modern Living is your go-to site for all of your home improvement needs. </p>
-                                <Link to="/Register"><Button variant="outline-light" style={{ marginRight: "10px", borderRadius: "0px" }} size="md">SIGN-UP</Button></Link>
+                                <Link to="/register"><Button variant="outline-light" style={{ marginRight: "10px", borderRadius: "0px" }} size="md">SIGN-UP</Button></Link>
                             </div>
                         </div>
                         <div className="col-lg-5 " >
@@ -176,9 +165,9 @@ class Home extends Component {
                             <div className="help-text-area ">
                                 <span className="header1" style={{ color: 'white' }}>GET</span>
                                 <span className="header2" style={{ color: 'white' }}> STARTED</span>
-                                <p className="help-text">Sometimes the hardest part of home remodeling is not knowing where to start. Who wants to run to Lowe's multiple times a say because you forgot that one thing?</p>
+                                <p className="help-text">Sometimes the hardest part of home remodeling is not knowing where to start. Who wants to run to Lowe's multiple times a day because you forgot that one thing?</p>
                                 <p className="help-text">We have created a checklist to help you jumpstart your project and help you make the best decisions.</p>
-                                <Link to="/Register"><Button variant="outline-light" style={{ marginRight: "10px", borderRadius: "0px" }} size="md">SIGN-UP</Button></Link>
+                                <Link to="/register"><Button variant="outline-light" style={{ marginRight: "10px", borderRadius: "0px" }} size="md">SIGN-UP</Button></Link>
                             </div>
                         </div>
                         <div className="col-lg-5 " >
@@ -192,7 +181,7 @@ class Home extends Component {
 
 
                 {/* Help section  */}
-                <section id="help px-0 d-flex">
+                <section id="help" className="px-0 d-flex">
                     <div className="row help-bg px-0" >
                         <div className="col-lg-6 px-0 help-contractor order-2 order-lg-1" >
                             <img src={Contractor} alt="Modern kitchen " />
@@ -201,7 +190,7 @@ class Home extends Component {
                             <div className="about-text-area">
                                 <span className="header1" >NEED HELP?</span>
                                 <p className="help-text" style={{ color: ' #626366' }}>Do you need help with interior design or on a plumbing project? Pick what you need help with and we provide you with the best contractors/designers available. </p>
-                                <Link to="/Register"><Button variant="outline-dark" style={{ marginRight: "10px", borderRadius: "0px" }} size="md">SIGN-UP</Button></Link>
+                                <Link to="/register"><Button variant="outline-dark" style={{ marginRight: "10px", borderRadius: "0px" }} size="md">SIGN-UP</Button></Link>
                             </div>
                         </div>
                     </div>
@@ -244,8 +233,8 @@ class Home extends Component {
                             <Col lg={5}>
                                 <div className="footer-subcribe">
                                     <Form action="#">
-                                        <input placeholder="Your Email Address" type="text" />
-                                        <Button color="red" type="submit"><i class="fas fa-envelope"></i></Button>
+                                    <input className="newsletter-input" placeholder="Your Email Address" type="text" />
+                                        <Button color="red" type="submit"><i className="fas fa-envelope"></i></Button>
                                     </Form>
                                 </div>
                             </Col>
@@ -253,7 +242,7 @@ class Home extends Component {
                     </div>
                 </section>
                 {/* End of newsletters section */}
-
+                </Fade>
             </div>
         );
     }
