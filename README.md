@@ -3,7 +3,7 @@
 
 ## Usage
 * Users can register and login under their email and password
-* For login test credentials, email me @ <chase.w.edwards9@gmail.com> or check my resume
+
 
 ## Description
 A full-stack MERN app that acts as a centralized place for all things needed for your home improvement.
