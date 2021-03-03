@@ -29,19 +29,15 @@ class NavigationBar extends Component {
     }
     render() {
         return (
-            <div>
-                <div className="row signup">
-                    <div className='col-s-8'>
-                    </div>
+            <nav>
+                <div className="user-logs">
                     {this.state.isAuth
                         ? 
-                        <div className='col-s-4 ml-auto'>
-                            <Button onClick={this.handleLogout} variant="outline-light" style={{marginRight: "20px", borderRadius: "0px"}} size="sm">LOG OUT</Button>
-                        </div>
+                        <Button onClick={this.handleLogout} variant="outline-light" style={{marginRight: "20px", borderRadius: "0px"}} size="sm">LOG OUT</Button>
                         : 
-                        <div className='col-s-4 ml-auto'>
-                            <Link to="/register"><Button variant="outline-light" style={{marginRight: "10px", borderRadius: "0px"}} size="sm">SIGN UP</Button></Link>
-                            <Link to="/login"><Button variant="outline-light" style={{marginRight: "20px", borderRadius: "0px"}} size="sm">LOG IN</Button></Link>
+                        <div>
+                            <Link to="/register" className="nav-user-link">SIGN UP</Link>
+                            <Link to="/login" className="nav-user-link">LOG IN</Link>
                         </div>
                     }
                 </div>
@@ -76,7 +72,7 @@ class NavigationBar extends Component {
                         </Navbar.Collapse>
                     }
                 </Navbar>
-            </div>
+            </nav>
         )
     }
 }
